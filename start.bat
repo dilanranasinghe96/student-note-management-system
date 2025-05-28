@@ -1,0 +1,3 @@
+@echo off
+echo Starting Student Note Manager...
+node start.js 

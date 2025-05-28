@@ -1,0 +1,66 @@
+{
+  "name": "student-note-manager",
+  "version": "1.0.0",
+  "description": "Student note management system using Electron and SQLite",
+  "main": "main.js",
+  "scripts": {
+    "start": "node start.js",
+    "start:electron": "electron .",
+    "dev": "concurrently \"webpack --mode development --watch\" \"electron .\"",
+    "build": "webpack --mode production && electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.129",
+    "@mui/material": "^5.13.1",
+    "@mui/x-date-pickers": "^6.5.0",
+    "dayjs": "^1.11.7",
+    "draft-js": "^0.11.7",
+    "react": "^18.2.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.1",
+    "@babel/preset-react": "^7.22.3",
+    "babel-loader": "^9.1.2",
+    "concurrently": "^8.0.1",
+    "css-loader": "^6.7.4",
+    "electron": "^24.3.1",
+    "electron-builder": "^23.6.0",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "build": {
+    "appId": "com.student.notemanager",
+    "productName": "Student Note Manager",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "public/bundle.js",
+      "public/index.html"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

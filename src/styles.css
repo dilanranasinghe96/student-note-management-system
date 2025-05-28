@@ -1,0 +1,58 @@
+/* Login and Register Pages Layout */
+.login-container,
+.register-container {
+  display: flex;
+  height: 100vh;
+}
+
+.login-form,
+.register-form {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-sidebar {
+  flex: 1;
+  background-color: #e3f2fd;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* Form styles */
+.MuiTextField-root {
+  margin-bottom: 20px !important;
+}
+
+/* Make sure inputs have the right appearance */
+.MuiOutlinedInput-root {
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Button styling */
+.MuiButton-contained {
+  text-transform: none;
+  font-weight: 500;
+}
+
+/* Typography adjustments */
+h4.MuiTypography-root {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+}
+
+/* Icon styling */
+.benefits-sidebar .MuiSvgIcon-root {
+  font-size: 2rem;
+} 

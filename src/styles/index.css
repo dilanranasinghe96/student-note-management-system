@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.login-container, .register-container {
+  display: flex;
+  height: 100vh;
+}
+
+.login-form, .register-form {
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h1, .register-form h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-form p, .register-form p {
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.benefits-sidebar {
+  width: 40%;
+  background-color: #e3f2fd;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.benefits-sidebar h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.benefit-item .icon {
+  color: #1976d2;
+  margin-right: 1rem;
+}
+
+.benefit-item .text {
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #fff;
+  height: 100vh;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar .logo {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.sidebar-nav-item {
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  color: #424242;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #f5f5f5;
+}
+
+.sidebar-nav-item.active {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.sidebar-nav-item .icon {
+  margin-right: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-bar .subject-filter {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-bar .subject-filter.active {
+  background-color: #1976d2;
+  color: white;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.note-card .title {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.note-card .subject {
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.note-card .content {
+  color: #424242;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.note-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.note-card .tag {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.assignments-table, .exams-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.assignments-table th, .exams-table th {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 500;
+}
+
+.assignments-table td, .exams-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-grid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-day {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-day .date {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-day .event {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.tags-input {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.tag-item .remove {
+  margin-left: 0.3rem;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+}
+
+.btn-secondary {
+  background-color: #f5f5f5;
+  color: #424242;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.main-layout {
+  display: flex;
+  height: 100vh;
+} 
