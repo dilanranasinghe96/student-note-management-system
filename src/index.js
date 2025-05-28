@@ -20,6 +20,7 @@ import Login from './components/Login';
 import MainLayout from './components/MainLayout';
 import Notes from './components/Notes';
 import Register from './components/Register';
+import Subjects from './components/Subjects';
 import Tags from './components/Tags';
 
 // Define theme
@@ -67,6 +68,7 @@ const App = () => {
                 <Route path="calendar" element={<Calendar />} />
                 <Route path="assignments" element={<Assignments />} />
                 <Route path="exams" element={<Exams />} />
+                <Route path="subjects" element={<Subjects />} />
                 <Route path="tags" element={<Tags />} />
               </Route>
             </Routes>

@@ -33,7 +33,8 @@ function startElectron() {
   // Run electron
   const electron = spawn('npx', ['electron', '.'], {
     stdio: 'inherit',
-    shell: true
+    shell: true,
+    env: { ...process.env, NODE_ENV: 'production' }
   });
   
   electron.on('close', (code) => {

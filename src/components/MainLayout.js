@@ -5,6 +5,7 @@ import {
     ExitToApp as LogoutIcon,
     Description as NotesIcon,
     Settings as SettingsIcon,
+    Book as SubjectIcon,
     LocalOffer as TagIcon
 } from '@mui/icons-material';
 import {
@@ -55,6 +56,7 @@ const MainLayout = () => {
     { path: '/calendar', label: 'Calendar', icon: <CalendarIcon /> },
     { path: '/assignments', label: 'Assignments', icon: <AssignmentIcon /> },
     { path: '/exams', label: 'Exams', icon: <ExamIcon /> },
+    { path: '/subjects', label: 'Subjects', icon: <SubjectIcon /> },
     { path: '/tags', label: 'Tags', icon: <TagIcon /> }
   ];
 

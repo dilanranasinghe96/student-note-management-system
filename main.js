@@ -586,8 +586,10 @@ Working directory: ${__dirname}
     console.log(`Renderer (${level}): ${message}`);
   });
 
-  // Always open DevTools during development
-  mainWindow.webContents.openDevTools();
+  // Open DevTools only in development mode
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.webContents.openDevTools();
+  }
   
   return mainWindow;
 }
